@@ -1,0 +1,29 @@
+.menu {
+    display: grid;
+    grid-template-areas: "a b";
+    grid-gap: 50px;
+    justify-content: center;
+    margin: 50px;
+
+    &__note {
+        background-image: url("file:///Users/Dref/Sites/Projet3-300320/images/menu-1b.png");
+        @include menu;
+        }
+        
+    &__chic {
+        background-image: url("file:///Users/Dref/Sites/Projet3-300320/images/menu-2b.png");
+        @include menu;
+        }
+    
+    &__delight {
+        background: url(file:///Users/Dref/Sites/Projet3-300320/images/menu-3b.png);
+        @include menu;
+        }
+    
+    &__palet {
+        background: url(file:///Users/Dref/Sites/Projet3-300320/images/menu-4b.png);
+        @include menu;
+    }
+    
+    
+}
