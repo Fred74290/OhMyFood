@@ -1,0 +1,396 @@
+.menu {
+    margin: 50px 100px;
+    box-shadow:$box-shadow;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 80px 30px;
+
+    &-note {
+        background: #fcdfdb;
+        color: #3c1218;
+
+        & .title-up {
+        
+            & i {
+                font-size: 7rem;
+                background: linear-gradient(to right, #f05160 0%, #f6916a 100%);
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+            }
+    
+            & fa-itunes-note::before {
+                content: "";   
+            } 
+    
+            & h2 {
+                font-size: 5rem;
+                font-weight: 500;
+                font-family: 'Devonshire', cursive;
+                color: #3c1218;
+            }
+        }
+    
+        & .carte {
+            margin: 40px 0;
+            & p,
+              span {
+                font-family: 'Kalam', cursive;
+                font-size: 1.4rem;
+                font-weight: 300;
+                color: #3c1218;
+            }
+    
+            span {
+                font-weight: 500;
+            }
+    
+            &--content {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                margin-bottom: 30px;
+                
+                h3 {
+                    font-family: 'Kalam', cursive;
+                    font-size: 2rem;
+                    color: #3c1218;
+                }
+
+                & .separator {
+                    width: 30%;  
+                }
+    
+                & .line-note {
+                    background: linear-gradient(to top, #3c1218 5%, transparent 5.01%) no-repeat;
+                    background-size: 0 100%;
+                    transition: background-size 800ms;
+    
+                    &:hover {
+                        background-size: 100% 100%;
+                    }
+                }
+            }
+        }
+    
+        & .title-bottom {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+    
+            & i {
+                background: linear-gradient(to right, #f05160 0%, #f6916a 100%);
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                font-size: 3rem; 
+            }
+    
+            & fa-itunes-note::before {
+                content: "";  
+                
+            } 
+    
+            & h2 {
+                font-family: 'Devonshire', cursive;
+                color: #3c1218;
+                margin: 0 20px;
+                font-size: 3rem;
+                
+    
+            }
+        }
+    }
+
+    &-chic {
+        background: #fff5fe;
+        
+
+        & .title-up {
+    
+            & h2 {
+                font-size: 4rem;
+                font-weight: 500;
+                font-family: 'Sofia', cursive;
+                background: linear-gradient(to right, #d8852e 0%, #905bfd 100%);
+                background-clip: border-box;
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+            }
+        }
+
+        & .starter {
+
+            & p {
+                color: #c67412;
+                
+                & span {
+                    color: #c67412;
+                }
+            }
+
+            & h3 {
+                color: #c67412;
+            }
+        }
+
+        & .maincourse {
+
+            & p {
+                color: #a56799;
+                
+                & span {
+                    color: #a56799;
+                }
+            }
+
+            & h3 {
+                color: #a56799;
+            }
+        }
+
+        & .desert {
+
+            & p {
+                color: #6e4ccc;
+                
+                & span {
+                    color: #6e4ccc;
+                }
+            }
+
+            & h3 {
+                color: #6e4ccc;
+            }
+        }
+    
+        & .carte {
+            margin: 40px 0;
+
+            & h3 {
+                font-family: 'Roboto Slab', serif;
+                font-size: 1.4rem;
+            }
+
+            & p,
+              span {
+                font-family: 'Roboto Slab', serif;
+                font-size: 1.2rem;
+                font-weight: 300;
+                padding: 0 45px;
+            }
+    
+            span {
+                font-weight: 500;
+            }
+    
+            &--content {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                margin-bottom: 30px;
+                
+                & .separator {
+                    width: 30%;  
+                }
+    
+                & .line-chic-starter {
+                    background: linear-gradient(to top, #c67412 5%, transparent 5.01%) no-repeat;
+                    background-size: 0 100%;
+                    transition: background-size 800ms;
+    
+                    &:hover {
+                        background-size: 100% 100%;
+                    }
+                }
+
+                & .line-chic-maincourse {
+                    background: linear-gradient(to top, #a56799 5%, transparent 5.01%) no-repeat;
+                    background-size: 0 100%;
+                    transition: background-size 800ms;
+    
+                    &:hover {
+                        background-size: 100% 100%;
+                    }
+                }
+
+                & .line-chic-desert {
+                    background: linear-gradient(to top, #6e4ccc 5%, transparent 5.01%) no-repeat;
+                    background-size: 0 100%;
+                    transition: background-size 800ms;
+    
+                    &:hover {
+                        background-size: 100% 100%;
+                    }
+                }
+            }
+        }
+    }
+
+    &-delight {
+        background: #edefef;
+        
+        & .title-up {
+    
+            & h2 {
+                font-size: 4rem;
+                font-weight: 500;
+                font-family: 'Dancing Script', cursive;
+                background: linear-gradient(to right, #0231df 0%, #229df9 100%);
+                background-clip: border-box;
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+            }
+        }
+    
+        & .carte {
+            margin: 40px 0;
+
+            & h3 {
+                font-family: 'Kalam', cursive;
+                font-size: 1.6rem;
+                color: #000;
+            }
+
+            & p,
+              span {
+                font-family: 'Kalam', cursive;
+                font-size: 1.2rem;
+                font-weight: 300;
+                padding: 0 78px;
+                color: #000;
+            }
+    
+            span {
+                font-weight: 500;
+            }
+
+            &--content {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                margin-bottom: 30px;
+
+                & .separator {
+                    width: 30%;  
+                }
+    
+                & .line-delight-starter {
+                    background: linear-gradient(to top, #0228dd 5%, transparent 5.01%) no-repeat;
+                    background-size: 0 100%;
+                    transition: background-size 800ms;
+    
+                    &:hover {
+                        background-size: 100% 100%;
+                    }
+                }
+
+                & .line-delight-maincourse {
+                    background: linear-gradient(to top, #0670f3 5%, transparent 5.01%) no-repeat;
+                    background-size: 0 100%;
+                    transition: background-size 800ms;
+    
+                    &:hover {
+                        background-size: 100% 100%;
+                    }
+                }
+
+                & .line-delight-desert {
+                    background: linear-gradient(to top, #229df9 5%, transparent 5.01%) no-repeat;
+                    background-size: 0 100%;
+                    transition: background-size 800ms;
+    
+                    &:hover {
+                        background-size: 100% 100%;
+                    }
+                }
+            }
+        }
+    }
+
+    &-palet {
+        background: #fdfffd;
+        
+        & .title-up {
+    
+            & h2 {
+                font-size: 6rem;
+                font-weight: 500;
+                font-family: 'Kaushan Script', cursive;
+                background: linear-gradient(to right, #54a646 0%, #beff7f 100%);
+                background-clip: border-box;
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+            }
+        }
+    
+        & .carte {
+            margin: 40px 0;
+
+            & h3 {
+                font-family: 'Kalam', cursive;
+                font-size: 1.6rem;
+                color: #000;
+                font-weight: 300;
+            }
+
+            & p,
+              span {
+                font-family: 'Kalam', cursive;
+                font-size: 1.2rem;
+                font-weight: 300;
+                padding: 0 68px;
+                color: #000;
+            }
+    
+            &--content {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                margin-bottom: 30px;
+
+                & .separator {
+                    width: 30%;  
+                }
+    
+                & .line-delight-starter {
+                    background: linear-gradient(to top, #54a646 5%, transparent 5.01%) no-repeat;
+                    background-size: 0 100%;
+                    transition: background-size 800ms;
+    
+                    &:hover {
+                        background-size: 100% 100%;
+                    }
+                }
+
+                & .line-delight-maincourse {
+                    background: linear-gradient(to top, #80cb5e 5%, transparent 5.01%) no-repeat;
+                    background-size: 0 100%;
+                    transition: background-size 800ms;
+    
+                    &:hover {
+                        background-size: 100% 100%;
+                    }
+                }
+
+                & .line-delight-desert {
+                    background: linear-gradient(to top, #beff7f 5%, transparent 5.01%) no-repeat;
+                    background-size: 0 100%;
+                    transition: background-size 800ms;
+    
+                    &:hover {
+                        background-size: 100% 100%;
+                    }
+                }
+            }
+        }
+    }
+}
+
+h2 {
+    font-size: 3rem;
+    color: #3c1218;
+    margin-top: 40px;
+    font-weight: 500;
+}
+

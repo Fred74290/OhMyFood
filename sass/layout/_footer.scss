@@ -1,18 +1,25 @@
-footer {
+.footer {
     background: $colour-primary;
     position:sticky;
     bottom:0;
-    /*z-index:1000;*/
-}
-
-.footer {
     display: flex;
     justify-content: space-between;
     padding: 10px;
-    
-    &__link:hover {
-        animation: move 1s ease-in-out;
+
+    @include breakpoints(laptop) {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      &__link:focus {
+        transform: skew(2px, 0, 0);
+      }
     }
+      &__link:hover {
+          animation: move 1s ease-in-out;
+          }
+
+      
 }
 
 @keyframes move {

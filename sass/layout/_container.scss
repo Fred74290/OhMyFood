@@ -1,28 +1,83 @@
-.menu {
+.menus {
     display: grid;
-    grid-template-areas: "a b";
-    grid-gap: 50px;
+    /*grid-template-areas: "a b";
+    grid-gap: 50px;*/
     justify-content: center;
     margin: 50px;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 40px;
 
+        @include breakpoints(laptop) {
+            grid-template-columns: repeat(1, 1fr);
+        }
+    
     &__note {
-        background-image: url("file:///Users/Dref/Sites/Projet3-300320/images/menu-1b.png");
-        @include menu;
+        background: #fcdfdb;
+        @include cartes;
+
+        & i {
+            background: linear-gradient(to right, #f05160 0%, #f6916a 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        & fa-itunes-note::before {
+            content: "";
+            
         }
         
-    &__chic {
-        background-image: url("file:///Users/Dref/Sites/Projet3-300320/images/menu-2b.png");
-        @include menu;
+        & h2 {
+            font-family: 'Devonshire', cursive;
+            color: #3c1218;
         }
+
+        & p {
+            color: #3c1218;
+        }
+    }
+        
+    &__chic {
+        background: #fff5fe;
+        @include cartes;
+        & h2 {
+            font-family: 'Sofia', cursive;
+            background: linear-gradient(to right, #d8852e 0%, #905bfd 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        & p {
+            color: #c77412;
+        }
+    }
     
     &__delight {
-        background: url(file:///Users/Dref/Sites/Projet3-300320/images/menu-3b.png);
-        @include menu;
+        @include cartes;
+        & h2 {
+            font-family: 'Dancing Script', cursive;
+            background: linear-gradient(to right, #0229dd 0%, #55acfb 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
         }
+
+        & p {
+            color: #0887fb;
+        }
+    }
     
     &__palet {
-        background: url(file:///Users/Dref/Sites/Projet3-300320/images/menu-4b.png);
-        @include menu;
+        background: #fdfffd;
+        @include cartes;
+        & h2 {
+            font-family: 'Kaushan Script', cursive;
+            background: linear-gradient(to right, #42973c 0%, #bfff7e 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        & p {
+            color: #79c45c;
+        }
     }
     
     

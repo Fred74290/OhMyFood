@@ -6,4 +6,11 @@ header {
 
 .logo {
     padding: 20px 0;
+
+    & img {
+        
+        @include breakpoints(laptop) {
+        width: 50vw;
+        }
+    }
 } 
