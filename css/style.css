@@ -164,7 +164,7 @@ header {
   }
 }
 
-.menus {
+.cartes {
   display: grid;
   /*grid-template-areas: "a b";
   grid-gap: 50px;*/
@@ -174,11 +174,11 @@ header {
   grid-gap: 40px;
 }
 @media screen and (max-width: 768px) {
-  .menus {
+  .cartes {
     grid-template-columns: repeat(1, 1fr);
   }
 }
-.menus__note {
+.cartes__note {
   background: #fcdfdb;
   width: 300px;
   height: 400px;
@@ -189,36 +189,36 @@ header {
   flex-direction: column;
   justify-content: center;
 }
-.menus__note a {
+.cartes__note a {
   transition: transform 0.6s ease-in-out;
 }
-.menus__note a:hover {
+.cartes__note a:hover {
   overflow: hidden;
   transform: scale(1.15);
   opacity: 0.8;
   cursor: pointer;
 }
-.menus__note p {
+.cartes__note p {
   font-family: "Mali", cursive;
   font-size: 3rem;
   font-weight: 300;
 }
-.menus__note i {
+.cartes__note i {
   background: linear-gradient(to right, #f05160 0%, #f6916a 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
-.menus__note fa-itunes-note::before {
+.cartes__note fa-itunes-note::before {
   content: "";
 }
-.menus__note h2 {
+.cartes__note h2 {
   font-family: "Devonshire", cursive;
   color: #3c1218;
 }
-.menus__note p {
+.cartes__note p {
   color: #3c1218;
 }
-.menus__chic {
+.cartes__chic {
   background: #fff5fe;
   width: 300px;
   height: 400px;
@@ -229,30 +229,30 @@ header {
   flex-direction: column;
   justify-content: center;
 }
-.menus__chic a {
+.cartes__chic a {
   transition: transform 0.6s ease-in-out;
 }
-.menus__chic a:hover {
+.cartes__chic a:hover {
   overflow: hidden;
   transform: scale(1.15);
   opacity: 0.8;
   cursor: pointer;
 }
-.menus__chic p {
+.cartes__chic p {
   font-family: "Mali", cursive;
   font-size: 3rem;
   font-weight: 300;
 }
-.menus__chic h2 {
+.cartes__chic h2 {
   font-family: "Sofia", cursive;
   background: linear-gradient(to right, #d8852e 0%, #905bfd 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
-.menus__chic p {
+.cartes__chic p {
   color: #c77412;
 }
-.menus__delight {
+.cartes__delight {
   width: 300px;
   height: 400px;
   /*background-size: 100%;*/
@@ -262,30 +262,30 @@ header {
   flex-direction: column;
   justify-content: center;
 }
-.menus__delight a {
+.cartes__delight a {
   transition: transform 0.6s ease-in-out;
 }
-.menus__delight a:hover {
+.cartes__delight a:hover {
   overflow: hidden;
   transform: scale(1.15);
   opacity: 0.8;
   cursor: pointer;
 }
-.menus__delight p {
+.cartes__delight p {
   font-family: "Mali", cursive;
   font-size: 3rem;
   font-weight: 300;
 }
-.menus__delight h2 {
+.cartes__delight h2 {
   font-family: "Dancing Script", cursive;
   background: linear-gradient(to right, #0229dd 0%, #55acfb 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
-.menus__delight p {
+.cartes__delight p {
   color: #0887fb;
 }
-.menus__palet {
+.cartes__palet {
   background: #fdfffd;
   width: 300px;
   height: 400px;
@@ -296,27 +296,27 @@ header {
   flex-direction: column;
   justify-content: center;
 }
-.menus__palet a {
+.cartes__palet a {
   transition: transform 0.6s ease-in-out;
 }
-.menus__palet a:hover {
+.cartes__palet a:hover {
   overflow: hidden;
   transform: scale(1.15);
   opacity: 0.8;
   cursor: pointer;
 }
-.menus__palet p {
+.cartes__palet p {
   font-family: "Mali", cursive;
   font-size: 3rem;
   font-weight: 300;
 }
-.menus__palet h2 {
+.cartes__palet h2 {
   font-family: "Kaushan Script", cursive;
   background: linear-gradient(to right, #42973c 0%, #bfff7e 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
-.menus__palet p {
+.cartes__palet p {
   color: #79c45c;
 }
 
@@ -334,9 +334,19 @@ header {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    padding: 2px;
+    /*@keyframes smart {
+      50% {
+        transform: scale(1.1);
+      }
+    }*/
   }
   .footer__link:focus {
-    transform: skew(2px, 0, 0);
+    outline: 3px solid #fdcb46;
+    outline-offset: 3px;
+  }
+  .footer__link:hover {
+    pointer-events: none;
   }
 }
 .footer__link:hover {
@@ -357,7 +367,7 @@ header {
     transform: translate3d(4px, 0, 0);
   }
 }
-.menu {
+.carte {
   margin: 50px 100px;
   box-shadow: #e7e2e2 0px 0px 6px 6px;
   text-align: center;
@@ -366,84 +376,84 @@ header {
   justify-content: center;
   padding: 80px 30px;
 }
-.menu-note {
+.carte-note {
   background: #fcdfdb;
   color: #3c1218;
 }
-.menu-note .title-up i {
+.carte-note .title i {
   font-size: 7rem;
   background: linear-gradient(to right, #f05160 0%, #f6916a 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
-.menu-note .title-up fa-itunes-note::before {
+.carte-note .title fa-itunes-note::before {
   content: "";
 }
-.menu-note .title-up h2 {
+.carte-note .title h2 {
   font-size: 5rem;
   font-weight: 500;
   font-family: "Devonshire", cursive;
   color: #3c1218;
 }
-.menu-note .carte {
+.carte-note .menu {
   margin: 40px 0;
 }
-.menu-note .carte p,
-.menu-note .carte span {
+.carte-note .menu p,
+.carte-note .menu span {
   font-family: "Kalam", cursive;
   font-size: 1.4rem;
   font-weight: 300;
   color: #3c1218;
 }
-.menu-note .carte span {
+.carte-note .menu span {
   font-weight: 500;
 }
-.menu-note .carte--content {
+.carte-note .menu--content {
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin-bottom: 30px;
 }
-.menu-note .carte--content h3 {
+.carte-note .menu--content h3 {
   font-family: "Kalam", cursive;
   font-size: 2rem;
   color: #3c1218;
 }
-.menu-note .carte--content .separator {
+.carte-note .menu--content .separator {
   width: 30%;
 }
-.menu-note .carte--content .line-note {
+.carte-note .menu--content .line-note {
   background: linear-gradient(to top, #3c1218 5%, transparent 5.01%) no-repeat;
   background-size: 0 100%;
   transition: background-size 800ms;
 }
-.menu-note .carte--content .line-note:hover {
+.carte-note .menu--content .line-note:hover {
   background-size: 100% 100%;
 }
-.menu-note .title-bottom {
+.carte-note .title-bottom {
   display: flex;
   justify-content: center;
   align-items: center;
 }
-.menu-note .title-bottom i {
+.carte-note .title-bottom i {
   background: linear-gradient(to right, #f05160 0%, #f6916a 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   font-size: 3rem;
 }
-.menu-note .title-bottom fa-itunes-note::before {
+.carte-note .title-bottom fa-itunes-note::before {
   content: "";
 }
-.menu-note .title-bottom h2 {
+.carte-note .title-bottom h2 {
   font-family: "Devonshire", cursive;
   color: #3c1218;
   margin: 0 20px;
   font-size: 3rem;
 }
-.menu-chic {
+.carte-chic {
   background: #fff5fe;
 }
-.menu-chic .title-up h2 {
+.carte-chic .title h2 {
   font-size: 4rem;
   font-weight: 500;
   font-family: "Sofia", cursive;
@@ -452,87 +462,87 @@ header {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
-.menu-chic .starter p {
+.carte-chic .starter p {
   color: #c67412;
 }
-.menu-chic .starter p span {
+.carte-chic .starter p span {
   color: #c67412;
 }
-.menu-chic .starter h3 {
+.carte-chic .starter h3 {
   color: #c67412;
 }
-.menu-chic .maincourse p {
+.carte-chic .maincourse p {
   color: #a56799;
 }
-.menu-chic .maincourse p span {
+.carte-chic .maincourse p span {
   color: #a56799;
 }
-.menu-chic .maincourse h3 {
+.carte-chic .maincourse h3 {
   color: #a56799;
 }
-.menu-chic .desert p {
+.carte-chic .desert p {
   color: #6e4ccc;
 }
-.menu-chic .desert p span {
+.carte-chic .desert p span {
   color: #6e4ccc;
 }
-.menu-chic .desert h3 {
+.carte-chic .desert h3 {
   color: #6e4ccc;
 }
-.menu-chic .carte {
+.carte-chic .menu {
   margin: 40px 0;
 }
-.menu-chic .carte h3 {
+.carte-chic .menu h3 {
   font-family: "Roboto Slab", serif;
   font-size: 1.4rem;
 }
-.menu-chic .carte p,
-.menu-chic .carte span {
+.carte-chic .menu p,
+.carte-chic .menu span {
   font-family: "Roboto Slab", serif;
   font-size: 1.2rem;
   font-weight: 300;
   padding: 0 45px;
 }
-.menu-chic .carte span {
+.carte-chic .menu span {
   font-weight: 500;
 }
-.menu-chic .carte--content {
+.carte-chic .menu--content {
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin-bottom: 30px;
 }
-.menu-chic .carte--content .separator {
+.carte-chic .menu--content .separator {
   width: 30%;
 }
-.menu-chic .carte--content .line-chic-starter {
+.carte-chic .menu--content .line-chic-starter {
   background: linear-gradient(to top, #c67412 5%, transparent 5.01%) no-repeat;
   background-size: 0 100%;
   transition: background-size 800ms;
 }
-.menu-chic .carte--content .line-chic-starter:hover {
+.carte-chic .menu--content .line-chic-starter:hover {
   background-size: 100% 100%;
 }
-.menu-chic .carte--content .line-chic-maincourse {
+.carte-chic .menu--content .line-chic-maincourse {
   background: linear-gradient(to top, #a56799 5%, transparent 5.01%) no-repeat;
   background-size: 0 100%;
   transition: background-size 800ms;
 }
-.menu-chic .carte--content .line-chic-maincourse:hover {
+.carte-chic .menu--content .line-chic-maincourse:hover {
   background-size: 100% 100%;
 }
-.menu-chic .carte--content .line-chic-desert {
+.carte-chic .menu--content .line-chic-desert {
   background: linear-gradient(to top, #6e4ccc 5%, transparent 5.01%) no-repeat;
   background-size: 0 100%;
   transition: background-size 800ms;
 }
-.menu-chic .carte--content .line-chic-desert:hover {
+.carte-chic .menu--content .line-chic-desert:hover {
   background-size: 100% 100%;
 }
-.menu-delight {
+.carte-delight {
   background: #edefef;
 }
-.menu-delight .title-up h2 {
+.carte-delight .title h2 {
   font-size: 4rem;
   font-weight: 500;
   font-family: "Dancing Script", cursive;
@@ -541,62 +551,62 @@ header {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
-.menu-delight .carte {
+.carte-delight .menu {
   margin: 40px 0;
 }
-.menu-delight .carte h3 {
+.carte-delight .menu h3 {
   font-family: "Kalam", cursive;
   font-size: 1.6rem;
   color: #000;
 }
-.menu-delight .carte p,
-.menu-delight .carte span {
+.carte-delight .menu p,
+.carte-delight .menu span {
   font-family: "Kalam", cursive;
   font-size: 1.2rem;
   font-weight: 300;
   padding: 0 78px;
   color: #000;
 }
-.menu-delight .carte span {
+.carte-delight .menu span {
   font-weight: 500;
 }
-.menu-delight .carte--content {
+.carte-delight .menu--content {
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin-bottom: 30px;
 }
-.menu-delight .carte--content .separator {
+.carte-delight .menu--content .separator {
   width: 30%;
 }
-.menu-delight .carte--content .line-delight-starter {
+.carte-delight .menu--content .line-delight-starter {
   background: linear-gradient(to top, #0228dd 5%, transparent 5.01%) no-repeat;
   background-size: 0 100%;
   transition: background-size 800ms;
 }
-.menu-delight .carte--content .line-delight-starter:hover {
+.carte-delight .menu--content .line-delight-starter:hover {
   background-size: 100% 100%;
 }
-.menu-delight .carte--content .line-delight-maincourse {
+.carte-delight .menu--content .line-delight-maincourse {
   background: linear-gradient(to top, #0670f3 5%, transparent 5.01%) no-repeat;
   background-size: 0 100%;
   transition: background-size 800ms;
 }
-.menu-delight .carte--content .line-delight-maincourse:hover {
+.carte-delight .menu--content .line-delight-maincourse:hover {
   background-size: 100% 100%;
 }
-.menu-delight .carte--content .line-delight-desert {
+.carte-delight .menu--content .line-delight-desert {
   background: linear-gradient(to top, #229df9 5%, transparent 5.01%) no-repeat;
   background-size: 0 100%;
   transition: background-size 800ms;
 }
-.menu-delight .carte--content .line-delight-desert:hover {
+.carte-delight .menu--content .line-delight-desert:hover {
   background-size: 100% 100%;
 }
-.menu-palet {
+.carte-palet {
   background: #fdfffd;
 }
-.menu-palet .title-up h2 {
+.carte-palet .title h2 {
   font-size: 6rem;
   font-weight: 500;
   font-family: "Kaushan Script", cursive;
@@ -605,62 +615,98 @@ header {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
-.menu-palet .carte {
+.carte-palet .menu {
   margin: 40px 0;
 }
-.menu-palet .carte h3 {
+.carte-palet .menu h3 {
   font-family: "Kalam", cursive;
   font-size: 1.6rem;
   color: #000;
   font-weight: 300;
 }
-.menu-palet .carte p,
-.menu-palet .carte span {
+.carte-palet .menu p,
+.carte-palet .menu span {
   font-family: "Kalam", cursive;
   font-size: 1.2rem;
   font-weight: 300;
   padding: 0 68px;
   color: #000;
 }
-.menu-palet .carte--content {
+.carte-palet .menu--content {
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin-bottom: 30px;
 }
-.menu-palet .carte--content .separator {
+.carte-palet .menu--content .separator {
   width: 30%;
 }
-.menu-palet .carte--content .line-delight-starter {
+.carte-palet .menu--content .line-delight-starter {
   background: linear-gradient(to top, #54a646 5%, transparent 5.01%) no-repeat;
   background-size: 0 100%;
   transition: background-size 800ms;
 }
-.menu-palet .carte--content .line-delight-starter:hover {
+.carte-palet .menu--content .line-delight-starter:hover {
   background-size: 100% 100%;
 }
-.menu-palet .carte--content .line-delight-maincourse {
+.carte-palet .menu--content .line-delight-maincourse {
   background: linear-gradient(to top, #80cb5e 5%, transparent 5.01%) no-repeat;
   background-size: 0 100%;
   transition: background-size 800ms;
 }
-.menu-palet .carte--content .line-delight-maincourse:hover {
+.carte-palet .menu--content .line-delight-maincourse:hover {
   background-size: 100% 100%;
 }
-.menu-palet .carte--content .line-delight-desert {
+.carte-palet .menu--content .line-delight-desert {
   background: linear-gradient(to top, #beff7f 5%, transparent 5.01%) no-repeat;
   background-size: 0 100%;
   transition: background-size 800ms;
 }
-.menu-palet .carte--content .line-delight-desert:hover {
+.carte-palet .menu--content .line-delight-desert:hover {
   background-size: 100% 100%;
 }
 
-h2 {
-  font-size: 3rem;
-  color: #3c1218;
-  margin-top: 40px;
+.content {
+  margin: 20px 30px;
+}
+
+.mentions h2,
+.mentions h3 {
+  display: flex;
+  justify-content: center;
+  color: #579c87;
+  margin: 30px 0;
   font-weight: 500;
 }
+.mentions ul {
+  margin-bottom: 10px;
+  display: grid;
+  justify-content: center;
+}
+.mentions ul li {
+  display: flex;
+  color: #000;
+  padding: 5px;
+  flex-direction: column;
+  margin-left: 116px;
+}
+.mentions ul li a {
+  color: #579c87;
+}
+.mentions p {
+  color: #000;
+}
+.mentions p a {
+  color: #579c87;
+}
+
+/*h2 {
+    font-size: 3rem;
+    color: #3c1218;
+    margin-top: 40px;
+    font-weight: 500;
+    grid-column: 1 / 4;
+    grid-row: 2 / 1;
+}*/
 
 /*# sourceMappingURL=style.css.map */

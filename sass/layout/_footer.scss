@@ -1,25 +1,36 @@
 .footer {
-    background: $colour-primary;
-    position:sticky;
-    bottom:0;
-    display: flex;
-    justify-content: space-between;
-    padding: 10px;
+  background: $colour-primary;
+  position:sticky;
+  bottom:0;
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
 
     @include breakpoints(laptop) {
       display: flex;
       flex-direction: column;
       justify-content: center;
       align-items: center;
-      &__link:focus {
-        transform: skew(2px, 0, 0);
-      }
-    }
-      &__link:hover {
-          animation: move 1s ease-in-out;
-          }
+      padding: 2px;
 
-      
+      &__link:focus {
+        outline: 3px solid $colour-secondary;
+        outline-offset: 3px;
+      }
+
+      &__link:hover {
+        pointer-events: none; 
+      }
+      /*@keyframes smart {
+        50% {
+          transform: scale(1.1);
+        }
+      }*/
+    }
+
+  &__link:hover {
+      animation: move 1s ease-in-out;
+  }    
 }
 
 @keyframes move {
@@ -39,3 +50,5 @@
       transform: translate3d(4px, 0, 0);
     }
   }
+
+  
