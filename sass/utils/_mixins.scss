@@ -1,19 +1,31 @@
-@mixin cartes {
+@mixin cards {
     width: 300px;
     height: 400px;
-    /*background-size: 100%;*/
     box-shadow:$box-shadow;
     text-align: center;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    & a {transition: transform 0.6s ease-in-out;}
-    
-    & a:hover {
-        overflow: hidden;
-        transform: scale(1.15);
-        opacity: 0.8;
-        cursor: pointer;
+
+    & a {
+        transition: transform 0.6s ease-in-out;
+        &:hover {
+            overflow: hidden;
+            transform: scale(1.15);
+            opacity: 0.8;
+            cursor: pointer;
+
+            @include breakpoints (laptop) {
+                pointer-events: none; 
+            }
+        }
+
+        @include breakpoints(laptop) {
+            &:focus {
+                outline: 3px solid $colour-primary;
+                outline-offset: 3px;
+            }
+        }
     }
 
     & p {
@@ -37,23 +49,50 @@
         @media screen and(max-width: 1824px) {@content;}
     }
 }
-/*@mixin device($break) {
-    @each $name, $break in $break {
-        #{name} {
-            @media screen and (max-width: map-get($breakpoints, name)){
+
+
+@mixin flexcenter {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+@mixin typography {
+    @include breakpoints (laptop) {
+        .card {
+            margin: 50px 50px;
+
+            & .title {
+                & i {
+                    font-size: 5rem;
+                }
+
+                & h2 {
+                    font-size: 3rem;
+                    font-weight: weight(thin);
+                }
+            }
+    
+            & .menu {
+    
+                & h3 {
+                    font-size: 1.5rem;
+                }
+    
+                & p {
+                    font-size: 1rem;
+                    font-weight: weight(thin);
+                }
+    
+                &--content {
+                    display: block;
+
+                    & .separator {
+                        display: none;
+                    }
+                }
             }
         }
     }
-}*/
-
-/*@mixin mobile-only {
-    @media screen and (max-width: map-get($breakpoints, mobile)){
-        @content;
-    }
-}*/
-
-/*@mixin device($device) {
-    @media screen and (max-width: map-get($breakpoints, $device)) {
-        @content;
-    }
-}*/
+}

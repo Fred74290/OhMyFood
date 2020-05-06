@@ -1,7 +1,28 @@
 $colour-primary:#579c87;
 $colour-secondary:#fdcb46;
 $box-shadow: rgb(231, 226, 226) 0px 0px 6px 6px;
-/*$breakpoints: 
-(mobile: 723px)
-(tablet: 900px);
-$device: mobile, tablet;*/
+$colors : (
+    starter :#c67412,
+    maincourse :#a56799,
+    desert :#6e4ccc,
+    note :#3c1218,
+    other : #000,
+);
+
+$backgrounds : (
+    starter :linear-gradient(to top, #c67412 5%, transparent 5.01%) no-repeat,
+    maincourse :linear-gradient(to top, #a56799 5%, transparent 5.01%) no-repeat,
+    desert :linear-gradient(to top, #6e4ccc 5%, transparent 5.01%) no-repeat,
+);
+
+$backgrounds-delight : (
+    starter :linear-gradient(to top, #0228dd 5%, transparent 5.01%) no-repeat,
+    maincourse :linear-gradient(to top, #0670f3 5%, transparent 5.01%) no-repeat,
+    desert :linear-gradient(to top, #229df9 5%, transparent 5.01%) no-repeat,
+);
+
+$font-weights: (
+    "thin": 300,
+    "regular": 400,
+    "medium": 500,
+);

@@ -1,4 +1,4 @@
-.cartes {
+.cards {
     display: grid;
     /*grid-template-areas: "a b";
     grid-gap: 50px;*/
@@ -13,7 +13,7 @@
     
     &__note {
         background: #fcdfdb;
-        @include cartes;
+        @include cards;
 
         & i {
             background: linear-gradient(to right, #f05160 0%, #f6916a 100%);
@@ -38,7 +38,7 @@
         
     &__chic {
         background: #fff5fe;
-        @include cartes;
+        @include cards;
         & h2 {
             font-family: 'Sofia', cursive;
             background: linear-gradient(to right, #d8852e 0%, #905bfd 100%);
@@ -52,7 +52,7 @@
     }
     
     &__delight {
-        @include cartes;
+        @include cards;
         & h2 {
             font-family: 'Dancing Script', cursive;
             background: linear-gradient(to right, #0229dd 0%, #55acfb 100%);
@@ -67,7 +67,7 @@
     
     &__palet {
         background: #fdfffd;
-        @include cartes;
+        @include cards;
         & h2 {
             font-family: 'Kaushan Script', cursive;
             background: linear-gradient(to right, #42973c 0%, #bfff7e 100%);
@@ -79,6 +79,4 @@
             color: #79c45c;
         }
     }
-    
-    
 }
