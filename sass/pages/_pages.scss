@@ -16,6 +16,11 @@
     }
 }
 
+@each $name, $background in $backgrounds-palet {
+    .card-palet .menu--content .line-#{$name} {
+        background: $background;
+    }
+}
 
 
 .card {
@@ -30,6 +35,7 @@
     &-note {
         background: #fcdfdb;
         color: #3c1218;
+
         & .title {
         
             & i {
@@ -151,44 +157,9 @@
             span {
                 font-weight: weight(medium);
             }
-    
-            &--content {
-                @include flexcenter;
-
-                & .separator {
-                    width: 30%;  
-                }
-    
-                & .line-starter {
-                    /*background: linear-gradient(to top, #c67412 5%, transparent 5.01%) no-repeat;*/
-                    background-size: 0 100%;
-                    transition: background-size 800ms;
-    
-                    &:hover {
-                        background-size: 100% 100%;
-                    }
-                }
-
-                & .line-maincourse {
-                    /*background: linear-gradient(to top, #a56799 5%, transparent 5.01%) no-repeat;*/
-                    background-size: 0 100%;
-                    transition: background-size 800ms;
-    
-                    &:hover {
-                        background-size: 100% 100%;
-                    }
-                }
-
-                & .line-desert {
-                    /*background: linear-gradient(to top, #6e4ccc 5%, transparent 5.01%) no-repeat;*/
-                    background-size: 0 100%;
-                    transition: background-size 800ms;
-    
-                    &:hover {
-                        background-size: 100% 100%;
-                    }
-                }
-            }
+            
+            @include content (chic);
+            
         }
     }
 
@@ -229,43 +200,8 @@
                 font-weight: weight(medium);
             }
 
-            &--content {
-                @include flexcenter;
+            @include content (delight);
 
-                & .separator {
-                    width: 30%;  
-                }
-    
-                & .line-starter {
-                    /*background: linear-gradient(to top, #0228dd 5%, transparent 5.01%) no-repeat;*/
-                    background-size: 0 100%;
-                    transition: background-size 800ms;
-    
-                    &:hover {
-                        background-size: 100% 100%;
-                    }
-                }
-
-                & .line-maincourse {
-                    /*background: linear-gradient(to top, #0670f3 5%, transparent 5.01%) no-repeat;*/
-                    background-size: 0 100%;
-                    transition: background-size 800ms;
-    
-                    &:hover {
-                        background-size: 100% 100%;
-                    }
-                }
-
-                & .line-desert {
-                    /*background: linear-gradient(to top, #229df9 5%, transparent 5.01%) no-repeat;*/
-                    background-size: 0 100%;
-                    transition: background-size 800ms;
-    
-                    &:hover {
-                        background-size: 100% 100%;
-                    }
-                }
-            }
         }
     }
 
@@ -303,44 +239,9 @@
                 /*padding: 0 68px;*/
                 color: #000;
             }
+            
+            @include content (palet);
     
-            &--content {
-                @include flexcenter;
-
-                & .separator {
-                    width: 30%;  
-                }
-    
-                & .line-starter {
-                    background: linear-gradient(to top, #54a646 5%, transparent 5.01%) no-repeat;
-                    background-size: 0 100%;
-                    transition: background-size 800ms;
-    
-                    &:hover {
-                        background-size: 100% 100%;
-                    }
-                }
-
-                & .line-maincourse {
-                    background: linear-gradient(to top, #80cb5e 5%, transparent 5.01%) no-repeat;
-                    background-size: 0 100%;
-                    transition: background-size 800ms;
-    
-                    &:hover {
-                        background-size: 100% 100%;
-                    }
-                }
-
-                & .line-desert {
-                    background: linear-gradient(to top, #beff7f 5%, transparent 5.01%) no-repeat;
-                    background-size: 0 100%;
-                    transition: background-size 800ms;
-    
-                    &:hover {
-                        background-size: 100% 100%;
-                    }
-                }
-            }
         }
     }
 }

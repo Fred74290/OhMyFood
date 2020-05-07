@@ -21,8 +21,14 @@ $backgrounds-delight : (
     desert :linear-gradient(to top, #229df9 5%, transparent 5.01%) no-repeat,
 );
 
+$backgrounds-palet : (
+    starter :linear-gradient(to top, #54a646 5%, transparent 5.01%) no-repeat,
+    maincourse :linear-gradient(to top, #80cb5e 5%, transparent 5.01%) no-repeat,
+    desert :linear-gradient(to top, #beff7f 5%, transparent 5.01%) no-repeat,
+);
+
 $font-weights: (
-    "thin": 300,
-    "regular": 400,
-    "medium": 500,
+    thin: 300,
+    regular: 400,
+    medium: 500,
 );

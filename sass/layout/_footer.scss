@@ -13,14 +13,21 @@
       align-items: center;
       font-size: 1.5rem;
 
-      &__link:focus {
-        outline: 3px solid $colour-secondary;
-        outline-offset: 3px;
+      &__link {
+        &:first-child {
+          padding-bottom: 20px;
+        }
+        
+        &:focus {
+          outline: 3px solid $colour-secondary;
+          outline-offset: 3px;
+        }
+  
+        &:hover {
+          pointer-events: none; 
+        }
       }
-
-      &__link:hover {
-        pointer-events: none; 
-      }
+      
       /*@keyframes smart {
         50% {
           transform: scale(1.1);

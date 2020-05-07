@@ -9,6 +9,7 @@
 
     & a {
         transition: transform 0.6s ease-in-out;
+
         &:hover {
             overflow: hidden;
             transform: scale(1.15);
@@ -21,7 +22,7 @@
         }
 
         @include breakpoints(laptop) {
-            &:focus {
+            &:focus{
                 outline: 3px solid $colour-primary;
                 outline-offset: 3px;
             }
@@ -49,7 +50,6 @@
         @media screen and(max-width: 1824px) {@content;}
     }
 }
-
 
 @mixin flexcenter {
     display: flex;
@@ -92,6 +92,78 @@
                         display: none;
                     }
                 }
+            }
+        }
+    }
+}
+
+@function weight($weight-name) {
+    @return map-get($font-weights, $weight-name);
+}
+
+@mixin content ($page) {
+    @if $page == chic {
+        @each $name, $background in $backgrounds {
+            &--content .line-#{$name} {
+                background: $background;
+                background-size: 0 100%;
+                transition: background-size 800ms;
+
+                &:hover {
+                    background-size: 100% 100%;
+                }
+            }
+        }
+
+        &--content {
+            @include flexcenter;
+
+            & .separator {
+                width: 30%;  
+            }
+        }
+    }
+
+    @if $page == delight {
+        @each $name, $background in $backgrounds-delight {
+            &--content .line-#{$name} {
+                background: $background;
+                background-size: 0 100%;
+                transition: background-size 800ms;
+
+                &:hover {
+                    background-size: 100% 100%;
+                }
+            }
+        }
+
+        &--content {
+            @include flexcenter;
+
+            & .separator {
+                width: 30%;  
+            }
+        }
+    }
+
+    @if $page == palet {
+        @each $name, $background in $backgrounds-palet {
+            &--content .line-#{$name} {
+                background: $background;
+                background-size: 0 100%;
+                transition: background-size 800ms;
+                
+                &:hover {
+                    background-size: 100% 100%;
+                }
+            }
+        }
+
+        &--content {
+            @include flexcenter;
+
+            & .separator {
+                width: 30%;  
             }
         }
     }
