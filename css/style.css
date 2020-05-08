@@ -166,6 +166,11 @@ header {
 .cards__note a {
   transition: transform 0.6s ease-in-out;
 }
+@media screen and (max-width: 768px) {
+  .cards__note a {
+    opacity: 1;
+  }
+}
 .cards__note a:hover {
   overflow: hidden;
   transform: scale(1.15);
@@ -175,6 +180,10 @@ header {
 @media screen and (max-width: 768px) {
   .cards__note a:hover {
     pointer-events: none;
+    transform: scale(1);
+    transition: opacity 0.2s ease;
+    opacity: 0.5;
+    background: #765601;
   }
 }
 @media screen and (max-width: 768px) {
@@ -216,6 +225,11 @@ header {
 .cards__chic a {
   transition: transform 0.6s ease-in-out;
 }
+@media screen and (max-width: 768px) {
+  .cards__chic a {
+    opacity: 1;
+  }
+}
 .cards__chic a:hover {
   overflow: hidden;
   transform: scale(1.15);
@@ -225,6 +239,10 @@ header {
 @media screen and (max-width: 768px) {
   .cards__chic a:hover {
     pointer-events: none;
+    transform: scale(1);
+    transition: opacity 0.2s ease;
+    opacity: 0.5;
+    background: #765601;
   }
 }
 @media screen and (max-width: 768px) {
@@ -259,6 +277,11 @@ header {
 .cards__delight a {
   transition: transform 0.6s ease-in-out;
 }
+@media screen and (max-width: 768px) {
+  .cards__delight a {
+    opacity: 1;
+  }
+}
 .cards__delight a:hover {
   overflow: hidden;
   transform: scale(1.15);
@@ -268,6 +291,10 @@ header {
 @media screen and (max-width: 768px) {
   .cards__delight a:hover {
     pointer-events: none;
+    transform: scale(1);
+    transition: opacity 0.2s ease;
+    opacity: 0.5;
+    background: #765601;
   }
 }
 @media screen and (max-width: 768px) {
@@ -303,6 +330,11 @@ header {
 .cards__palet a {
   transition: transform 0.6s ease-in-out;
 }
+@media screen and (max-width: 768px) {
+  .cards__palet a {
+    opacity: 1;
+  }
+}
 .cards__palet a:hover {
   overflow: hidden;
   transform: scale(1.15);
@@ -312,6 +344,10 @@ header {
 @media screen and (max-width: 768px) {
   .cards__palet a:hover {
     pointer-events: none;
+    transform: scale(1);
+    transition: opacity 0.2s ease;
+    opacity: 0.5;
+    background: #765601;
   }
 }
 @media screen and (max-width: 768px) {
@@ -356,12 +392,17 @@ header {
       }
     }*/
   }
+  .footer__link {
+    /*&:focus {
+      outline: 3px solid $colour-secondary;
+      outline-offset: 3px;
+    }*/
+  }
   .footer__link:first-child {
     padding-bottom: 20px;
   }
-  .footer__link:focus {
-    outline: 3px solid #fdcb46;
-    outline-offset: 3px;
+  .footer__link:active {
+    color: #765601;
   }
   .footer__link:hover {
     pointer-events: none;
@@ -682,28 +723,28 @@ header {
   /*padding: 0 68px;*/
   color: #000;
 }
-.card-palet .menu--content .line-starter {
+.card-palet .menu --content .line-starter {
   background: linear-gradient(to top, #54a646 5%, transparent 5.01%) no-repeat;
   background-size: 0 100%;
   transition: background-size 800ms;
 }
-.card-palet .menu--content .line-starter:hover {
+.card-palet .menu --content .line-starter:hover {
   background-size: 100% 100%;
 }
-.card-palet .menu--content .line-maincourse {
+.card-palet .menu --content .line-maincourse {
   background: linear-gradient(to top, #80cb5e 5%, transparent 5.01%) no-repeat;
   background-size: 0 100%;
   transition: background-size 800ms;
 }
-.card-palet .menu--content .line-maincourse:hover {
+.card-palet .menu --content .line-maincourse:hover {
   background-size: 100% 100%;
 }
-.card-palet .menu--content .line-desert {
+.card-palet .menu --content .line-desert {
   background: linear-gradient(to top, #beff7f 5%, transparent 5.01%) no-repeat;
   background-size: 0 100%;
   transition: background-size 800ms;
 }
-.card-palet .menu--content .line-desert:hover {
+.card-palet .menu --content .line-desert:hover {
   background-size: 100% 100%;
 }
 .card-palet .menu--content {
