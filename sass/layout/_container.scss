@@ -1,13 +1,23 @@
+@each $name, $font-family in $font-families {
+    .cards__#{$name} h2 {
+        font-family: $font-family;
+    }
+}
+
+@each $name, $font-family in $font-families {
+    .cards__#{$name} p {
+        font-family: (mali);
+    }
+}
+
 .cards {
     display: grid;
-    /*grid-template-areas: "a b";
-    grid-gap: 50px;*/
     justify-content: center;
     margin: 50px;
     grid-template-columns: repeat(2, 1fr);
     grid-gap: 40px;
 
-        @include breakpoints(laptop) {
+        @include breakpoints(mobile) {
             grid-template-columns: repeat(1, 1fr);
         }
     
@@ -27,12 +37,12 @@
         }
         
         & h2 {
-            font-family: 'Devonshire', cursive;
-            color: #3c1218;
+            color: color(note);
         }
 
         & p {
-            color: #3c1218;
+            color: color(note);
+            @include fontsize(title);
         }
     }
         
@@ -40,28 +50,28 @@
         background: #fff5fe;
         @include cards;
         & h2 {
-            font-family: 'Sofia', cursive;
             background: linear-gradient(to right, #d8852e 0%, #905bfd 100%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
         }
 
         & p {
-            color: #c77412;
+            color: color(starter);
+            @include fontsize(title);
         }
     }
     
     &__delight {
         @include cards;
         & h2 {
-            font-family: 'Dancing Script', cursive;
             background: linear-gradient(to right, #0229dd 0%, #55acfb 100%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
         }
 
         & p {
-            color: #0887fb;
+            color: color(delight);
+            @include fontsize(title);
         }
     }
     
@@ -69,14 +79,14 @@
         background: #fdfffd;
         @include cards;
         & h2 {
-            font-family: 'Kaushan Script', cursive;
             background: linear-gradient(to right, #42973c 0%, #bfff7e 100%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
         }
 
         & p {
-            color: #79c45c;
+            color: color(palet);
+            @include fontsize(title);
         }
     }
 }

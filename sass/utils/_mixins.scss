@@ -10,7 +10,7 @@
     & a {
         transition: transform 0.6s ease-in-out;
 
-        @include breakpoints (laptop) {
+        @include breakpoints (mobile) {
             opacity: 1;
         }
 
@@ -20,7 +20,7 @@
             opacity: 0.8;
             cursor: pointer;
 
-            @include breakpoints (laptop) {
+            @include breakpoints (mobile) {
                 pointer-events: none; 
                 transform: scale(1);
                 transition: opacity 0.2s ease;
@@ -29,7 +29,7 @@
             }
         }
 
-        @include breakpoints(laptop) {
+        @include breakpoints(mobile) {
 
             &:focus {
                 outline: 3px solid $colour-primary;
@@ -39,24 +39,14 @@
     }
 
     & p {
-        font-family: 'Mali', cursive;
-        font-size: 3rem;
-        font-weight: 300;
+        @include fontsize(secondtitle);
+        font-weight: weight(thin);
     }
 }
 
 @mixin breakpoints ($point) {
     @if $point == mobile {
-        @media screen and(max-width: 320px) {@content;}
-    }
-    @else if $point == laptop {
         @media screen and(max-width: 768px) {@content;}
-    }
-    @else if $point == desktop {
-        @media screen and(max-width: 1224px) {@content;}
-    }
-    @else if $point == largescreens {
-        @media screen and(max-width: 1824px) {@content;}
     }
 }
 
@@ -68,35 +58,43 @@
 }
 
 @mixin typography {
-    @include breakpoints (laptop) {
-        .card {
+    .card {
+        @include breakpoints (mobile) {
             margin: 50px 50px;
+        }
 
-            & .title {
-                & i {
-                    font-size: 5rem;
+        & .title {
+            & i {
+                @include breakpoints (mobile) {
+                @include fontsize(title)
                 }
+            }
 
-                & h2 {
-                    font-size: 3rem;
+            & h2 {
+                @include fontsize(title);
+                @include breakpoints (mobile) {
                     font-weight: weight(thin);
                 }
             }
-    
-            & .menu {
-    
-                & h3 {
-                    font-size: 1.5rem;
-                }
-    
-                & p {
-                    font-size: 1rem;
+        }
+
+        & .menu {
+
+            & h3 {
+                @include fontsize(subtitle);
+            }
+
+            & p {
+                @include fontsize(paragraph);
+                @include breakpoints (mobile) {
                     font-weight: weight(thin);
                 }
-    
+            }
+
+            @include breakpoints(mobile) {
                 &--content {
                     display: block;
-
+    
                     & .separator {
                         display: none;
                     }
@@ -106,13 +104,65 @@
     }
 }
 
+@mixin fontfamily($part) {
+    .card .menu h3, p, .price {
+        @if $part == chic {
+            font-family: map-get($font-family, roboto);
+        }
+        @else {
+            font-family: map-get($font-family, kalam);
+        }
+    }
+}
+
+@mixin fontsize($part) {
+    @if $part == title {
+      font-size: map-get($font-size, title);
+    }
+    @else if $part == subtitle {
+      font-size: map-get($font-size, subtitle);
+    }
+    @else if $part == paragraph {
+      font-size: map-get($font-size, paragraph);
+    }
+    @include breakpoints(mobile) {
+      font-size: map-get($font-size, $part)/1.6;
+    }
+}
+
 @function weight($weight-name) {
     @return map-get($font-weights, $weight-name);
 }
 
+@function color($color-name) {
+    @return map-get($colors, $color-name);
+}
+
 @mixin content ($page) {
+    @if $page == note {
+        @each $name, $background in $backgrounds-note {
+            &--content .line-#{$name} {
+                background: $background;
+                background-size: 0 100%;
+                transition: background-size 800ms;
+
+                &:hover {
+                    background-size: 100% 100%;
+                }
+            }
+        }
+
+        &--content {
+            @include flexcenter;
+
+            & .separator {
+                width: 30%;  
+            }
+        }
+    }
+
     @if $page == chic {
-        @each $name, $background in $backgrounds {
+        @each $name, $background in $backgrounds-chic {
             &--content .line-#{$name} {
                 background: $background;
                 background-size: 0 100%;
@@ -157,7 +207,7 @@
 
     @if $page == palet {
         @each $name, $background in $backgrounds-palet {
-            & --content .line-#{$name} {
+            &--content .line-#{$name} {
                 background: $background;
                 background-size: 0 100%;
                 transition: background-size 800ms;

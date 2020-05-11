@@ -6,7 +6,7 @@
   justify-content: space-between;
   padding: 10px;
 
-    @include breakpoints(laptop) {
+    @include breakpoints(mobile) {
       display: flex;
       flex-direction: column;
       justify-content: center;
@@ -21,21 +21,11 @@
         &:active {
           color: darken($color: $colour-secondary, $amount: 40%)
         }
-        /*&:focus {
-          outline: 3px solid $colour-secondary;
-          outline-offset: 3px;
-        }*/
   
         &:hover {
-          pointer-events: none; 
+          display: none;
         }
       }
-      
-      /*@keyframes smart {
-        50% {
-          transform: scale(1.1);
-        }
-      }*/
     }
 
   &__link:hover {

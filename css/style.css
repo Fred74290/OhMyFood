@@ -47,27 +47,8 @@ main {
   display: flex;
   justify-content: space-between;
   align-items: baseline;
-  /*& span {
-      content: ".";
-      animation: dots 2s infinite;*/
 }
 
-/*@keyframes dots {
-    0%, 20% {
-        color: rgba(0,0,0,0);
-        opacity: 1;
-    }
-
-    40%,60% {
-        color: $colour-secondary;
-        opacity: .5;
-    }
-
-    80%,100% {
-        opacity: 0;
-    }
-
-}*/
 .dot {
   width: 4px;
   height: 4px;
@@ -101,16 +82,12 @@ main {
 @keyframes dots2 {
   0% {
     opacity: 0;
-    /*transform: scale(1,1);*/
-    /*animation-timing-function: cubic-bezier(.91,-0.03,.92,.64);*/
   }
   66% {
     opacity: 1;
   }
   100% {
     opacity: 1;
-    /*transform: scale(.75);*/
-    /*animation-timing-function: cubic-bezier(.91,-0.03,.92,.64);*/
   }
 }
 @keyframes dots3 {
@@ -139,10 +116,40 @@ header {
   }
 }
 
+.cards__note h2 {
+  font-family: "Devonshire", cursive;
+}
+
+.cards__chic h2 {
+  font-family: "Sofia", cursive;
+}
+
+.cards__delight h2 {
+  font-family: "Dancing Script", cursive;
+}
+
+.cards__palet h2 {
+  font-family: "Kaushan Script", cursive;
+}
+
+.cards__note p {
+  font-family: mali;
+}
+
+.cards__chic p {
+  font-family: mali;
+}
+
+.cards__delight p {
+  font-family: mali;
+}
+
+.cards__palet p {
+  font-family: mali;
+}
+
 .cards {
   display: grid;
-  /*grid-template-areas: "a b";
-  grid-gap: 50px;*/
   justify-content: center;
   margin: 50px;
   grid-template-columns: repeat(2, 1fr);
@@ -193,9 +200,12 @@ header {
   }
 }
 .cards__note p {
-  font-family: "Mali", cursive;
-  font-size: 3rem;
   font-weight: 300;
+}
+@media screen and (max-width: 768px) {
+  .cards__note p {
+    font-size: 1.875rem;
+  }
 }
 .cards__note i {
   background: linear-gradient(to right, #f05160 0%, #f6916a 100%);
@@ -206,11 +216,16 @@ header {
   content: "";
 }
 .cards__note h2 {
-  font-family: "Devonshire", cursive;
   color: #3c1218;
 }
 .cards__note p {
   color: #3c1218;
+  font-size: 5rem;
+}
+@media screen and (max-width: 768px) {
+  .cards__note p {
+    font-size: 3.125rem;
+  }
 }
 .cards__chic {
   background: #fff5fe;
@@ -252,18 +267,26 @@ header {
   }
 }
 .cards__chic p {
-  font-family: "Mali", cursive;
-  font-size: 3rem;
   font-weight: 300;
 }
+@media screen and (max-width: 768px) {
+  .cards__chic p {
+    font-size: 1.875rem;
+  }
+}
 .cards__chic h2 {
-  font-family: "Sofia", cursive;
   background: linear-gradient(to right, #d8852e 0%, #905bfd 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 .cards__chic p {
-  color: #c77412;
+  color: #d8852e;
+  font-size: 5rem;
+}
+@media screen and (max-width: 768px) {
+  .cards__chic p {
+    font-size: 3.125rem;
+  }
 }
 .cards__delight {
   width: 300px;
@@ -304,18 +327,26 @@ header {
   }
 }
 .cards__delight p {
-  font-family: "Mali", cursive;
-  font-size: 3rem;
   font-weight: 300;
 }
+@media screen and (max-width: 768px) {
+  .cards__delight p {
+    font-size: 1.875rem;
+  }
+}
 .cards__delight h2 {
-  font-family: "Dancing Script", cursive;
   background: linear-gradient(to right, #0229dd 0%, #55acfb 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 .cards__delight p {
-  color: #0887fb;
+  color: #0229dd;
+  font-size: 5rem;
+}
+@media screen and (max-width: 768px) {
+  .cards__delight p {
+    font-size: 3.125rem;
+  }
 }
 .cards__palet {
   background: #fdfffd;
@@ -357,18 +388,26 @@ header {
   }
 }
 .cards__palet p {
-  font-family: "Mali", cursive;
-  font-size: 3rem;
   font-weight: 300;
 }
+@media screen and (max-width: 768px) {
+  .cards__palet p {
+    font-size: 1.875rem;
+  }
+}
 .cards__palet h2 {
-  font-family: "Kaushan Script", cursive;
   background: linear-gradient(to right, #42973c 0%, #bfff7e 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 .cards__palet p {
-  color: #79c45c;
+  color: #42973c;
+  font-size: 5rem;
+}
+@media screen and (max-width: 768px) {
+  .cards__palet p {
+    font-size: 3.125rem;
+  }
 }
 
 .footer {
@@ -386,17 +425,6 @@ header {
     justify-content: center;
     align-items: center;
     font-size: 1.5rem;
-    /*@keyframes smart {
-      50% {
-        transform: scale(1.1);
-      }
-    }*/
-  }
-  .footer__link {
-    /*&:focus {
-      outline: 3px solid $colour-secondary;
-      outline-offset: 3px;
-    }*/
   }
   .footer__link:first-child {
     padding-bottom: 20px;
@@ -405,7 +433,7 @@ header {
     color: #765601;
   }
   .footer__link:hover {
-    pointer-events: none;
+    display: none;
   }
 }
 .footer__link:hover {
@@ -427,7 +455,7 @@ header {
   }
 }
 .card-chic .starter * {
-  color: #c67412;
+  color: #d8852e;
 }
 
 .card-chic .maincourse * {
@@ -442,8 +470,20 @@ header {
   color: #3c1218;
 }
 
+.card-chic .delight * {
+  color: #0229dd;
+}
+
+.card-chic .palet * {
+  color: #42973c;
+}
+
 .card-chic .other * {
   color: #000;
+}
+
+.card-chic .menu--content .line-note {
+  background: linear-gradient(to top, #3c1218 5%, transparent 5.01%) no-repeat;
 }
 
 .card-chic .menu--content .line-starter {
@@ -482,6 +522,22 @@ header {
   background: linear-gradient(to top, #beff7f 5%, transparent 5.01%) no-repeat;
 }
 
+.card-note h2 {
+  font-family: "Devonshire", cursive;
+}
+
+.card-chic h2 {
+  font-family: "Sofia", cursive;
+}
+
+.card-delight h2 {
+  font-family: "Dancing Script", cursive;
+}
+
+.card-palet h2 {
+  font-family: "Kaushan Script", cursive;
+}
+
 .card {
   margin: 50px 100px;
   box-shadow: #e7e2e2 0px 0px 6px 6px;
@@ -505,28 +561,30 @@ header {
   content: "";
 }
 .card-note .title h2 {
-  font-size: 5rem;
   font-weight: 500;
-  font-family: "Devonshire", cursive;
   color: #3c1218;
 }
 .card-note .menu {
   margin: 40px 0;
 }
 .card-note .menu h3 {
-  font-family: "Kalam", cursive;
-  font-size: 2rem;
   color: #3c1218;
 }
 .card-note .menu p,
-.card-note .menu span {
-  font-family: "Kalam", cursive;
-  font-size: 1.4rem;
-  font-weight: 300;
+.card-note .menu .price {
   color: #3c1218;
+  font-weight: 300;
 }
-.card-note .menu span {
+.card-note .menu .price {
   font-weight: 500;
+}
+.card-note .menu--content .line-note {
+  background: linear-gradient(to top, #3c1218 5%, transparent 5.01%) no-repeat;
+  background-size: 0 100%;
+  transition: background-size 800ms;
+}
+.card-note .menu--content .line-note:hover {
+  background-size: 100% 100%;
 }
 .card-note .menu--content {
   display: flex;
@@ -536,14 +594,6 @@ header {
 }
 .card-note .menu--content .separator {
   width: 30%;
-}
-.card-note .menu--content .line-note {
-  background: linear-gradient(to top, #3c1218 5%, transparent 5.01%) no-repeat;
-  background-size: 0 100%;
-  transition: background-size 800ms;
-}
-.card-note .menu--content .line-note:hover {
-  background-size: 100% 100%;
 }
 .card-note .title-bottom {
   display: flex;
@@ -565,7 +615,6 @@ header {
   content: "";
 }
 .card-note .title-bottom h2 {
-  font-family: "Devonshire", cursive;
   color: #3c1218;
   margin: 0 20px;
   font-size: 3rem;
@@ -574,9 +623,7 @@ header {
   background: #fff5fe;
 }
 .card-chic .title h2 {
-  font-size: 5rem;
   font-weight: 500;
-  font-family: "Sofia", cursive;
   background: linear-gradient(to right, #d8852e 0%, #905bfd 100%);
   background-clip: border-box;
   -webkit-background-clip: text;
@@ -585,17 +632,11 @@ header {
 .card-chic .menu {
   margin: 40px 0;
 }
-.card-chic .menu h3 {
-  font-family: "Roboto Slab", serif;
-  font-size: 2rem;
-}
 .card-chic .menu p,
-.card-chic .menu span {
-  font-family: "Roboto Slab", serif;
-  font-size: 1.4rem;
+.card-chic .menu .price {
   font-weight: 300;
 }
-.card-chic .menu span {
+.card-chic .menu .price {
   font-weight: 500;
 }
 .card-chic .menu--content .line-starter {
@@ -635,9 +676,7 @@ header {
   background: #edefef;
 }
 .card-delight .title h2 {
-  font-size: 5rem;
   font-weight: 500;
-  font-family: "Dancing Script", cursive;
   background: linear-gradient(to right, #0231df 0%, #229df9 100%);
   background-clip: border-box;
   -webkit-background-clip: text;
@@ -647,18 +686,14 @@ header {
   margin: 40px 0;
 }
 .card-delight .menu h3 {
-  font-family: "Kalam", cursive;
-  font-size: 2rem;
   color: #000;
 }
 .card-delight .menu p,
-.card-delight .menu span {
-  font-family: "Kalam", cursive;
-  font-size: 1.4rem;
-  font-weight: 300;
+.card-delight .menu .price {
   color: #000;
+  font-weight: 300;
 }
-.card-delight .menu span {
+.card-delight .menu .price {
   font-weight: 500;
 }
 .card-delight .menu--content .line-starter {
@@ -698,9 +733,7 @@ header {
   background: #fdfffd;
 }
 .card-palet .title h2 {
-  font-size: 5rem;
   font-weight: 500;
-  font-family: "Kaushan Script", cursive;
   background: linear-gradient(to right, #54a646 0%, #beff7f 100%);
   background-clip: border-box;
   -webkit-background-clip: text;
@@ -710,41 +743,36 @@ header {
   margin: 40px 0;
 }
 .card-palet .menu h3 {
-  font-family: "Kalam", cursive;
-  font-size: 2rem;
   color: #000;
   font-weight: 300;
 }
 .card-palet .menu p,
-.card-palet .menu span {
-  font-family: "Kalam", cursive;
-  font-size: 1.4rem;
-  font-weight: 300;
-  /*padding: 0 68px;*/
+.card-palet .menu .price {
   color: #000;
+  font-weight: 300;
 }
-.card-palet .menu --content .line-starter {
+.card-palet .menu--content .line-starter {
   background: linear-gradient(to top, #54a646 5%, transparent 5.01%) no-repeat;
   background-size: 0 100%;
   transition: background-size 800ms;
 }
-.card-palet .menu --content .line-starter:hover {
+.card-palet .menu--content .line-starter:hover {
   background-size: 100% 100%;
 }
-.card-palet .menu --content .line-maincourse {
+.card-palet .menu--content .line-maincourse {
   background: linear-gradient(to top, #80cb5e 5%, transparent 5.01%) no-repeat;
   background-size: 0 100%;
   transition: background-size 800ms;
 }
-.card-palet .menu --content .line-maincourse:hover {
+.card-palet .menu--content .line-maincourse:hover {
   background-size: 100% 100%;
 }
-.card-palet .menu --content .line-desert {
+.card-palet .menu--content .line-desert {
   background: linear-gradient(to top, #beff7f 5%, transparent 5.01%) no-repeat;
   background-size: 0 100%;
   transition: background-size 800ms;
 }
-.card-palet .menu --content .line-desert:hover {
+.card-palet .menu--content .line-desert:hover {
   background-size: 100% 100%;
 }
 .card-palet .menu--content {
@@ -777,20 +805,15 @@ header {
 }
 .mentions ul {
   margin-bottom: 10px;
-  /*display: grid;
-  justify-content: center;*/
 }
 .mentions ul li {
   color: #000;
   padding: 5px 0;
-  /*display: flex;
-  flex-direction: column;
-  margin-left: 116px;*/
 }
 .mentions ul li a {
   color: #579c87;
 }
-.mentions ul li span {
+.mentions ul li .price {
   padding-left: 10px;
   color: #3c1218;
 }
@@ -800,34 +823,82 @@ header {
 .mentions p a {
   color: #579c87;
 }
-.mentions p span {
-  color: #3c1218;
+.mentions p .price {
+  color: #000;
 }
 
 @media screen and (max-width: 768px) {
   .card {
     margin: 50px 50px;
   }
+}
+@media screen and (max-width: 768px) {
   .card .title i {
     font-size: 5rem;
   }
+}
+@media screen and (max-width: 768px) and (max-width: 768px) {
+  .card .title i {
+    font-size: 3.125rem;
+  }
+}
+.card .title h2 {
+  font-size: 5rem;
+}
+@media screen and (max-width: 768px) {
   .card .title h2 {
-    font-size: 3rem;
+    font-size: 3.125rem;
+  }
+}
+@media screen and (max-width: 768px) {
+  .card .title h2 {
     font-weight: 300;
   }
+}
+.card .menu h3 {
+  font-size: 2rem;
+}
+@media screen and (max-width: 768px) {
   .card .menu h3 {
-    font-size: 1.5rem;
+    font-size: 1.25rem;
   }
+}
+.card .menu p {
+  font-size: 1.4rem;
+}
+@media screen and (max-width: 768px) {
   .card .menu p {
-    font-size: 1rem;
+    font-size: 0.875rem;
+  }
+}
+@media screen and (max-width: 768px) {
+  .card .menu p {
     font-weight: 300;
   }
+}
+@media screen and (max-width: 768px) {
   .card .menu--content {
     display: block;
   }
   .card .menu--content .separator {
     display: none;
   }
+}
+
+.card .menu h3, p, .price {
+  font-family: "Roboto Slab", serif;
+}
+
+.card .menu h3, p, .price {
+  font-family: "Kalam", cursive;
+}
+
+.card .menu h3, p, .price {
+  font-family: "Kalam", cursive;
+}
+
+.card .menu h3, p, .price {
+  font-family: "Kalam", cursive;
 }
 
 /*# sourceMappingURL=style.css.map */

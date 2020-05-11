@@ -8,7 +8,7 @@ header {
     padding: 20px 0;
 
     & img {
-        @include breakpoints(laptop) {
+        @include breakpoints(mobile) {
         width: 50vw;
         }
     }

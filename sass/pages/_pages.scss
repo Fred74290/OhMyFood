@@ -4,7 +4,13 @@
     }
 }
 
-@each $name, $background in $backgrounds {
+@each $name, $background in $backgrounds-note {
+    .card-chic .menu--content .line-#{$name} {
+        background: $background;
+    }
+}
+
+@each $name, $background in $backgrounds-chic {
     .card-chic .menu--content .line-#{$name} {
         background: $background;
     }
@@ -22,6 +28,11 @@
     }
 }
 
+@each $name, $font-family in $font-families {
+    .card-#{$name} h2 {
+        font-family: $font-family;
+    }
+}
 
 .card {
     margin: 50px 100px;
@@ -34,7 +45,7 @@
 
     &-note {
         background: #fcdfdb;
-        color: #3c1218;
+        color: color(note);
 
         & .title {
         
@@ -50,56 +61,35 @@
             } 
     
             & h2 {
-                font-size: 5rem;
                 font-weight: weight(medium);
-                font-family: 'Devonshire', cursive;
-                color: #3c1218;
+                color: color(note);
             }
         }
     
         & .menu {
             margin: 40px 0;
+
             h3 {
-                font-family: 'Kalam', cursive;
-                font-size: 2rem;
-                color: #3c1218;
+                color: color(note);
             }
             p,
-              span {
-                font-family: 'Kalam', cursive;
-                font-size: 1.4rem;
+            .price {
+                color: color(note);
                 font-weight: weight(thin);
-                color: #3c1218;
             }
     
-            span {
+            .price {
                 font-weight: weight(medium);
             }
     
-            &--content {
-                @include flexcenter;
-                
-                & .separator {
-                    width: 30%;  
-                }
-    
-                & .line-note {
-                    background: linear-gradient(to top, #3c1218 5%, transparent 5.01%) no-repeat;
-                    background-size: 0 100%;
-                    transition: background-size 800ms;
-    
-                    &:hover {
-                        background-size: 100% 100%;
-                    }
-                }
-            }
+            @include content (note);
         }
     
         & .title-bottom {
             display: flex;
             justify-content: center;
             align-items: center;
-            @include breakpoints(laptop) {
+            @include breakpoints(mobile) {
                 display: flex;
                 flex-direction: column-reverse;
             }
@@ -115,8 +105,7 @@
             } 
     
             & h2 {
-                font-family: 'Devonshire', cursive;
-                color: #3c1218;
+                color: color(note);
                 margin: 0 20px;
                 font-size: 3rem;
             }
@@ -129,9 +118,7 @@
         & .title {
     
             & h2 {
-                font-size: 5rem;
                 font-weight: weight(medium);
-                font-family: 'Sofia', cursive;
                 background: linear-gradient(to right, #d8852e 0%, #905bfd 100%);
                 background-clip: border-box;
                 -webkit-background-clip: text;
@@ -143,18 +130,14 @@
             margin: 40px 0;
 
             & h3 {
-                font-family: 'Roboto Slab', serif;
-                font-size: 2rem;
             }
 
             & p,
-              span {
-                font-family: 'Roboto Slab', serif;
-                font-size: 1.4rem;
+            .price {
                 font-weight: weight(thin);
             }
     
-            span {
+            .price {
                 font-weight: weight(medium);
             }
             
@@ -169,9 +152,7 @@
         & .title {
             
             & h2 {
-                font-size: 5rem;
                 font-weight: weight(medium);
-                font-family: 'Dancing Script', cursive;
                 background: linear-gradient(to right, #0231df 0%, #229df9 100%);
                 background-clip: border-box;
                 -webkit-background-clip: text;
@@ -183,20 +164,16 @@
             margin: 40px 0;
 
             & h3 {
-                font-family: 'Kalam', cursive;
-                font-size: 2rem;
-                color: #000;
+                color: color(other);
             }
 
             & p,
-              span {
-                font-family: 'Kalam', cursive;
-                font-size: 1.4rem;
+            .price {
+                color: color(other);
                 font-weight: weight(thin);
-                color: #000;
             }
     
-            span {
+            .price {
                 font-weight: weight(medium);
             }
 
@@ -211,9 +188,7 @@
         & .title {
     
             & h2 {
-                font-size: 5rem;
                 font-weight: weight(medium);
-                font-family: 'Kaushan Script', cursive;
                 background: linear-gradient(to right, #54a646 0%, #beff7f 100%);
                 background-clip: border-box;
                 -webkit-background-clip: text;
@@ -225,19 +200,14 @@
             margin: 40px 0;
 
             & h3 {
-                font-family: 'Kalam', cursive;
-                font-size: 2rem;
-                color: #000;
+                color: color(other);
                 font-weight: weight(thin);
             }
 
             & p,
-              span {
-                font-family: 'Kalam', cursive;
-                font-size: 1.4rem;
+            .price {
+                color: color(other);
                 font-weight: weight(thin);
-                /*padding: 0 68px;*/
-                color: #000;
             }
             
             @include content (palet);
@@ -248,7 +218,7 @@
 /******************************** Page mentions légales *************************************/
 .content {
     margin: 20px 30px;
-    @include breakpoints (laptop) {
+    @include breakpoints (mobile) {
         display: block;
     }
 }
@@ -265,38 +235,38 @@
 
     & ul {
         margin-bottom: 10px;
-        /*display: grid;
-        justify-content: center;*/
         
-
         & li {
-            color: #000;
+            color: color(other);
             padding: 5px 0;
-            /*display: flex;
-            flex-direction: column;
-            margin-left: 116px;*/
+            
             & a {
                 color: $colour-primary;
             }
 
-            & span {
+            & .price {
                 padding-left: 10px;
-                color: #3c1218;
+                color: color(note);
             }
         }
     }
 
     & p {
-        color: #000;
+        color: color(other);
 
         & a {
             color: $colour-primary;
         }
 
-        & span {
-            color: #3c1218;
+        & .price {
+            color: color(other);
         }
     }
 }
 
 @include typography;
+
+@include fontfamily(chic);
+@include fontfamily(note);
+@include fontfamily(delight);
+@include fontfamily(palet);

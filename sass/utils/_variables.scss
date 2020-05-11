@@ -1,34 +1,63 @@
 $colour-primary:#579c87;
 $colour-secondary:#fdcb46;
 $box-shadow: rgb(231, 226, 226) 0px 0px 6px 6px;
+
 $colors : (
-    starter :#c67412,
-    maincourse :#a56799,
-    desert :#6e4ccc,
-    note :#3c1218,
-    other : #000,
-);
-
-$backgrounds : (
-    starter :linear-gradient(to top, #c67412 5%, transparent 5.01%) no-repeat,
-    maincourse :linear-gradient(to top, #a56799 5%, transparent 5.01%) no-repeat,
-    desert :linear-gradient(to top, #6e4ccc 5%, transparent 5.01%) no-repeat,
-);
-
-$backgrounds-delight : (
-    starter :linear-gradient(to top, #0228dd 5%, transparent 5.01%) no-repeat,
-    maincourse :linear-gradient(to top, #0670f3 5%, transparent 5.01%) no-repeat,
-    desert :linear-gradient(to top, #229df9 5%, transparent 5.01%) no-repeat,
-);
-
-$backgrounds-palet : (
-    starter :linear-gradient(to top, #54a646 5%, transparent 5.01%) no-repeat,
-    maincourse :linear-gradient(to top, #80cb5e 5%, transparent 5.01%) no-repeat,
-    desert :linear-gradient(to top, #beff7f 5%, transparent 5.01%) no-repeat,
+  starter :#d8852e,
+  maincourse :#a56799,
+  desert :#6e4ccc,
+  note :#3c1218,
+  delight :#0229dd,
+  palet :#42973c,
+  other : #000,
 );
 
 $font-weights: (
-    thin: 300,
-    regular: 400,
-    medium: 500,
+  thin: 300,
+  regular: 400,
+  medium: 500,
 );
+
+$font-size: (
+  title:5rem,
+  secondtitle:3rem, 
+  subtitle:2rem,
+  paragraph:1.4rem,
+);
+
+$font-families: (
+  note: ('Devonshire', cursive),
+  chic: ('Sofia', cursive),
+  delight: ('Dancing Script', cursive),
+  palet: ('Kaushan Script', cursive),
+);
+
+$font-family: (
+  kalam: ('Kalam', cursive),
+  roboto: ('Roboto Slab', serif),
+  mali: ('Mali', cursive),
+);
+
+$backgrounds-note : (
+  note :linear-gradient(to top, #3c1218 5%, transparent 5.01%) no-repeat,
+);
+
+$backgrounds-chic : (
+  starter :linear-gradient(to top, #c67412 5%, transparent 5.01%) no-repeat,
+  maincourse :linear-gradient(to top, #a56799 5%, transparent 5.01%) no-repeat,
+  desert :linear-gradient(to top, #6e4ccc 5%, transparent 5.01%) no-repeat,
+);
+
+$backgrounds-delight : (
+  starter :linear-gradient(to top, #0228dd 5%, transparent 5.01%) no-repeat,
+  maincourse :linear-gradient(to top, #0670f3 5%, transparent 5.01%) no-repeat,
+  desert :linear-gradient(to top, #229df9 5%, transparent 5.01%) no-repeat,
+);
+
+$backgrounds-palet : (
+  starter :linear-gradient(to top, #54a646 5%, transparent 5.01%) no-repeat,
+  maincourse :linear-gradient(to top, #80cb5e 5%, transparent 5.01%) no-repeat,
+  desert :linear-gradient(to top, #beff7f 5%, transparent 5.01%) no-repeat,
+);
+  
+
