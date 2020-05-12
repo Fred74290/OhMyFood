@@ -21,10 +21,6 @@
         &:active {
           color: darken($color: $colour-secondary, $amount: 40%)
         }
-  
-        &:hover {
-          display: none;
-        }
       }
     }
 
