@@ -1,15 +1,16 @@
+/*boucle pour assigner une police différente à chaque élément visés *** Tous les titres de niveau H2 *** 4 menus sur la page principale */
 @each $name, $font-family in $font-families {
     .cards__#{$name} h2 {
         font-family: $font-family;
     }
 }
-
+/*boucle pour assigner la même police à chaque élément visés *** Tous les paragraphes "Menu" *** 4 menus sur la page principale */
 @each $name, $font-family in $font-families {
     .cards__#{$name} p {
         font-family: (mali);
     }
 }
-
+/******************************** Page d'accueil * Page principale *************************************/
 .cards {
     display: grid;
     justify-content: center;
