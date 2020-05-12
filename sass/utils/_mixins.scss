@@ -44,12 +44,6 @@
     }
 }
 
-@mixin breakpoints ($point) {
-    @if $point == mobile {
-        @media screen and(max-width: 768px) {@content;}
-    }
-}
-
 @mixin flexcenter {
     display: flex;
     justify-content: space-between;
@@ -102,40 +96,6 @@
             }
         }
     }
-}
-
-@mixin fontfamily($part) {
-    .card .menu h3, p, .price {
-        @if $part == chic {
-            font-family: map-get($font-family, roboto);
-        }
-        @else {
-            font-family: map-get($font-family, kalam);
-        }
-    }
-}
-
-@mixin fontsize($part) {
-    @if $part == title {
-      font-size: map-get($font-size, title);
-    }
-    @else if $part == subtitle {
-      font-size: map-get($font-size, subtitle);
-    }
-    @else if $part == paragraph {
-      font-size: map-get($font-size, paragraph);
-    }
-    @include breakpoints(mobile) {
-      font-size: map-get($font-size, $part)/1.6;
-    }
-}
-
-@function weight($weight-name) {
-    @return map-get($font-weights, $weight-name);
-}
-
-@function color($color-name) {
-    @return map-get($colors, $color-name);
 }
 
 @mixin content ($page) {
@@ -225,5 +185,47 @@
                 width: 30%;  
             }
         }
+    }
+}
+
+@mixin fontfamily($part) {
+    .card .menu h3, p, .price {
+        @if $part == chic {
+            font-family: map-get($font-family, roboto);
+        }
+        @else {
+            font-family: map-get($font-family, kalam);
+        }
+    }
+}
+
+@mixin fontsize($part) {
+    @if $part == title {
+      font-size: map-get($font-size, title);
+    }
+    @else if $part == subtitle {
+      font-size: map-get($font-size, subtitle);
+    }
+    @else if $part == paragraph {
+      font-size: map-get($font-size, paragraph);
+    }
+    @include breakpoints(mobile) {
+      font-size: map-get($font-size, $part)/1.6;
+    }
+}
+
+/* ***************** fonctions **************************   */
+@function weight($weight-name) {
+    @return map-get($font-weights, $weight-name);
+}
+
+@function color($color-name) {
+    @return map-get($colors, $color-name);
+}
+
+/*   ***************mixin media queries*********************   */
+@mixin breakpoints ($point) {
+    @if $point == mobile {
+        @media screen and(max-width: 768px) {@content;}
     }
 }
