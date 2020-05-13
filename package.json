@@ -4,8 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "sass": "sass --watch ./sass/main.scss:./css/style.css",
-    "prefix": "postcss ./css/style.css --use autoprefixer -d ./css/prefixed/"
+    "watch": "sass --watch ./sass/main.scss:./css/style.css",
+    "build": "sass --watch ./sass/main.scss:./css/style.css --style compressed --no-source-map",
+    "prefix": "postcss ./css/style.css --use autoprefixer -d ./css/"
   },
   "author": "dref",
   "license": "ISC",
