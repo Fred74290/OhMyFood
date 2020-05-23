@@ -26,22 +26,22 @@
         background: #fcdfdb;
         @include cards;
 
-        & i {
+        i {
             background: linear-gradient(to right, #f05160 0%, #f6916a 100%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
         }
 
-        & fa-itunes-note::before {
+        fa-itunes-note::before {
             content: "";
             
         }
         
-        & h2 {
+        h2 {
             color: color(note);
         }
 
-        & p {
+        p {
             color: color(note);
             @include fontsize(title);
         }
@@ -50,13 +50,14 @@
     &__chic {
         background: #fff5fe;
         @include cards;
-        & h2 {
+
+        h2 {
             background: linear-gradient(to right, #d8852e 0%, #905bfd 100%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
         }
 
-        & p {
+        p {
             color: color(starter);
             @include fontsize(title);
         }
@@ -64,13 +65,14 @@
     
     &__delight {
         @include cards;
-        & h2 {
+
+        h2 {
             background: linear-gradient(to right, #0229dd 0%, #55acfb 100%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
         }
 
-        & p {
+        p {
             color: color(delight);
             @include fontsize(title);
         }
@@ -79,13 +81,14 @@
     &__palet {
         background: #fdfffd;
         @include cards;
-        & h2 {
+
+        h2 {
             background: linear-gradient(to right, #42973c 0%, #bfff7e 100%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
         }
 
-        & p {
+        p {
             color: color(palet);
             @include fontsize(title);
         }

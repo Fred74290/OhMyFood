@@ -1,0 +1,7 @@
+/*boucle pour assigner une couleur différente à chaque élément visés *** menu chic *** 3 paragraphes de couleur diff*/
+@each $name, $color in $colors {
+    .card-chic .#{$name} * {
+        color: $color;
+    }
+}
+

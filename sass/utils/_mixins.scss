@@ -1,3 +1,4 @@
+/*mixin appliquée au fichier _index.scss - page d'accueil index.html*/
 @mixin cards {
     width: 300px;
     height: 400px;
@@ -7,7 +8,7 @@
     flex-direction: column;
     justify-content: center;
 
-    & a {
+    a {
         transition: transform 0.6s ease-in-out;
 
         @include breakpoints (mobile) {
@@ -38,7 +39,7 @@
         }
     }
 
-    & p {
+    p {
         @include fontsize(secondtitle);
         font-weight: weight(thin);
     }
@@ -50,21 +51,23 @@
     align-items: center;
     margin-bottom: 30px;
 }
+/*mixin appliquée aux fichiers des pages subsidiaires*/
+@mixin card-typography {
 
-@mixin typography {
     .card {
         @include breakpoints (mobile) {
             margin: 50px 50px;
         }
 
-        & .title {
-            & i {
+        .title {
+
+            i {
                 @include breakpoints (mobile) {
                 @include fontsize(title)
                 }
             }
 
-            & h2 {
+            h2 {
                 @include fontsize(title);
                 @include breakpoints (mobile) {
                     font-weight: weight(thin);
@@ -72,13 +75,13 @@
             }
         }
 
-        & .menu {
+        .menu {
 
-            & h3 {
+            h3 {
                 @include fontsize(subtitle);
             }
 
-            & p {
+            p {
                 @include fontsize(paragraph);
                 @include breakpoints (mobile) {
                     font-weight: weight(thin);
@@ -89,7 +92,7 @@
                 &--content {
                     display: block;
     
-                    & .separator {
+                    .separator {
                         display: none;
                     }
                 }
@@ -97,12 +100,12 @@
         }
     }
 }
-
+/*mixin appliquée aux fichiers des pages subsidiaires*/
 @mixin content ($page) {
     @if $page == note {
         @each $name, $background in $backgrounds-note {
             &--content .line-#{$name} {
-                background: $background;
+                /*background: $background;*/
                 background-size: 0 100%;
                 transition: background-size 800ms;
 
@@ -115,7 +118,7 @@
         &--content {
             @include flexcenter;
 
-            & .separator {
+            .separator {
                 width: 30%;  
             }
         }
@@ -124,7 +127,7 @@
     @if $page == chic {
         @each $name, $background in $backgrounds-chic {
             &--content .line-#{$name} {
-                background: $background;
+               /* background: $background;*/
                 background-size: 0 100%;
                 transition: background-size 800ms;
 
@@ -137,7 +140,7 @@
         &--content {
             @include flexcenter;
 
-            & .separator {
+            .separator {
                 width: 30%;  
             }
         }
@@ -146,7 +149,7 @@
     @if $page == delight {
         @each $name, $background in $backgrounds-delight {
             &--content .line-#{$name} {
-                background: $background;
+                /*background: $background;*/
                 background-size: 0 100%;
                 transition: background-size 800ms;
 
@@ -159,7 +162,7 @@
         &--content {
             @include flexcenter;
 
-            & .separator {
+            .separator {
                 width: 30%;  
             }
         }
@@ -168,7 +171,7 @@
     @if $page == palet {
         @each $name, $background in $backgrounds-palet {
             &--content .line-#{$name} {
-                background: $background;
+                /*background: $background;*/
                 background-size: 0 100%;
                 transition: background-size 800ms;
                 
@@ -181,20 +184,9 @@
         &--content {
             @include flexcenter;
 
-            & .separator {
+            .separator {
                 width: 30%;  
             }
-        }
-    }
-}
-
-@mixin fontfamily($part) {
-    .card .menu h3, p, .price {
-        @if $part == chic {
-            font-family: map-get($font-family, roboto);
-        }
-        @else {
-            font-family: map-get($font-family, kalam);
         }
     }
 }
@@ -212,15 +204,6 @@
     @include breakpoints(mobile) {
       font-size: map-get($font-size, $part)/1.6;
     }
-}
-
-/* ***************** fonctions **************************   */
-@function weight($weight-name) {
-    @return map-get($font-weights, $weight-name);
-}
-
-@function color($color-name) {
-    @return map-get($colors, $color-name);
 }
 
 /*   ***************mixin media queries*********************   */

@@ -5,11 +5,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Devonshire&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap');
-/*font-family: 'Montserrat', sans-serif;*/
-/*font-family: 'Devonshire', cursive;*/
-/*font-family: 'Sofia', cursive;*/
-/*font-family: 'Dancing Script', cursive;*/
-/*font-family: 'Kaushan Script', cursive;*/
-/*font-family: 'Mali', cursive;*/
-/*font-family: 'Kalam', cursive;*/
-/*font-family: 'Roboto Slab', serif;*/
+
+.card .menu h3, p, .price {
+    font-family: map-get($font-family, kalam);
+}
+
